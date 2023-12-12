@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bare - TailwindCSS</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
+    <!-- Core theme TailwindCSS-->
+    <link rel="stylesheet" href="./public/css/output.css">
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <style>
+        body::before {
+            height: 0px !important;
+        }
+    </style>
+</head>
+
+
+<!-- If you want to change the primary color from green to something else. Change it with the tailwind.config.js in the Project Root Folder -->
+
+<body class="bg-gray-100">
+    <main>
+        <div class="h-screen flex items-center justify-center">
+            <div class="grid lg:grid-cols-2 items-center w-full">
+                <div class="image-section">
+                    <!-- align image center -->
+                    <div class="my-4">
+                        <a href="./index.html">
+                            <img src="./public/img/logo.svg" alt="Logo" class="mx-auto w-96 h-96">
+                        </a>
+                    </div>
+                </div>
+                <div class="px-8 py-4 rounded-xl lg:w-[70%]">
+                    <div class="text-black text-3xl font-semibold text-center my-6">Login to your account</div>
+
+                    <div class="input-area my-5">
+                        <label for="company_email" class="py-2">Email Address</label>
+                        <input type="text" name="company_email" class="py-2 px-3 rounded-lg w-full bg-[#f1f6ef]" placeholder="example@gmail.com">
+                    </div>
+
+                    <div class="input-area my-5">
+                        <label for="password" class="py-2">Password</label>
+                        <div class="relative toggle-password">
+                            <input type="password" id="password" name="password"
+                                class="py-2 px-3 rounded-lg w-full bg-[#f1f6ef]">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <label for="password-toggle" class="ml-2 text-sm">
+                                    <svg width="13" height="11" viewBox="0 0 13 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.87552 7.60439C5.26369 7.87832 5.73677 8.04395 6.24018 8.04395C7.57452 8.04395 8.66019 6.90365 8.66019 5.50218C8.66019 4.97344 8.5025 4.47655 8.24169 4.06885L7.58059 4.76322C7.68976 4.97981 7.75042 5.23462 7.75042 5.50218C7.75042 6.37491 7.07111 7.08839 6.24018 7.08839C5.98545 7.08839 5.74284 7.02469 5.53662 6.91002L4.87552 7.60439ZM10.2376 1.97322C11.117 2.8141 11.863 3.94802 12.421 5.31128C12.4695 5.43232 12.4695 5.57246 12.421 5.68713C11.1231 8.85956 8.81224 10.7579 6.2406 10.7579H6.23453C5.06395 10.7579 3.9419 10.3566 2.95327 9.62401L1.77663 10.8599C1.68565 10.9554 1.57041 11 1.45517 11C1.33993 11 1.21863 10.9554 1.13372 10.8599C0.982086 10.7006 0.957825 10.4458 1.07913 10.261L1.09732 10.2356L10.0677 0.813812C10.0799 0.801071 10.092 0.788331 10.0981 0.77559C10.1102 0.762849 10.1223 0.750109 10.1284 0.737368L10.6985 0.138555C10.8805 -0.046185 11.1655 -0.046185 11.3414 0.138555C11.5234 0.323295 11.5234 0.629072 11.3414 0.813812L10.2376 1.97322ZM3.81589 5.50482C3.81589 5.67045 3.83408 5.83608 3.85834 5.98897L1.61422 8.34599C1.00771 7.60703 0.480035 6.71519 0.0615376 5.68956C0.0130161 5.57489 0.0130161 5.43475 0.0615376 5.31371C1.35949 2.14128 3.67032 0.249282 6.23589 0.249282H6.24196C7.10928 0.249282 7.95234 0.465874 8.72868 0.873576L6.70291 3.00127C6.55735 2.97579 6.39965 2.95668 6.24196 2.95668C4.90155 2.95668 3.81589 4.09697 3.81589 5.50482Z"
+                                                fill="#151812" />
+                                        </g>
+                                    </svg>
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 my-5 md:justify-between">
+                        <div class="remember-password">
+                            <label for="remember-password" class="flex gap-2">
+                                <input type="checkbox" name="remember-password" class="rounded-lg" id="remember-password">
+                                <div class="text-neutral-900 font-light text-sm">Remember me</div>
+                            </label>
+                        </div>
+                        <div class="reset-password text-right font-light text-sm">
+                            <a href="./forgot-password.html">Reset Password?</a>
+                        </div>
+                    </div>
+
+                    <button
+                        class="w-full h-12 px-16 py-3 bg-green-800 rounded-lg justify-center items-center gap-2.5 inline-flex">
+                        <span class="text-white text-base font-medium font-['Poppins']">Log in</span>
+                    </button>
+
+                    <p class="mt-3 text-center">
+                        Dont have an account? <a href="./register.html">Sign Up</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Core Navbar JS-->
+    <script src="./public/js/navbar.js"></script>
+    <!-- Core theme JS-->
+    <script src="./public/js/scripts.js"></script>
+    <!-- Add jQuery (ensure it is included before this script) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Your HTML structure remains the same as provided previously -->
+
+    <script>
+        $(document).ready(function () {
+            $('.toggle-password').on('change', function () {
+                var passwordInput = $(this).closest('.relative').find('input[type="password"]');
+                var icon = $(this).closest('.relative').find('.toggle-password-icon');
+
+                if ($(this).is(':checked')) {
+                    passwordInput.attr('type', 'text');
+                    icon.html('<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM6 12a6 6 0 1112 0 6 6 0 01-12 0z"/>');
+                } else {
+                    passwordInput.attr('type', 'password');
+                    icon.html('<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM6 12a6 6 0 1112 0 6 6 0 01-12 0z"/>');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
