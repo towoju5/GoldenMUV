@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bare - TailwindCSS</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
+    <!-- Core theme TailwindCSS-->
+    <link rel="stylesheet" href="./public/css/output.css">
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <style>
+        body::before {
+            height: 0px !important;
+        }
+    </style>
+</head>
+
+
+<!-- If you want to change the primary color from green to something else. Change it with the tailwind.config.js in the Project Root Folder -->
+
+<body class="bg-gray-100">
+    <main>
+        <div class="flex">
+            <div class="bg-white h-screen p-5 pt-8 w-80 relative">
+                <div class="sidebar-close-open absolute -right-4 top-[5rem] duration-300 cursor-pointer">
+                    <img src="./public/img/arrow-left.svg" alt="ope-close-nav">
+                </div>
+
+                <!-- // website logo -->
+                <img src="./public/img/logo.svg" alt="Logo" class="mx-auto">
+
+                <nav class="mt-10 space-y-2">
+                    <a href="#dashboard" class="inline-flex items-center py-3 px-3 bg-indigo-100 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/dashboard.svg" alt="Projects">
+                        <div class="text-green-800 text-xl">Dashboard</div>
+                    </a>
+
+                    <a href="#project" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/project.svg" alt="Projects">   
+                        <div class="text-green-800 text-xl">Project</div>
+                    </a>
+
+                    <a href="#board" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/board.svg" alt="Projects">   
+                        <div class="text-green-800 text-xl">Board</div>
+                    </a>
+
+                    <a href="#client" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/client.svg" alt="Projects">   
+                        <div class="text-green-800 text-xl">Clients</div>
+                    </a>
+
+                    <a href="#settings" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/settings.svg" alt="Projects">   
+                        <div class="text-green-800 text-xl">Settings</div>
+                    </a>
+
+                    <a href="#plans" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/plans.svg" alt="Projects">   
+                        <div class="text-green-800 text-xl">Plans</div>
+                    </a>
+
+                    <div class="w-full bottom-0">
+                        <a href="./index.html" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                            <img src="./public/svgs/logout.svg" alt="Projects">   
+                            <div class="text-green-800 text-xl">Logout</div>
+                        </a>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Core Navbar JS-->
+    <script src="./public/js/navbar.js"></script>
+    <!-- Core theme JS-->
+    <script src="./public/js/scripts.js"></script>
+</body>
+
+</html>
