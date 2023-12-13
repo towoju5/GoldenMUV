@@ -92,13 +92,15 @@
             <!-- page content -->
             <div class="w-full md:mx-10 mt-10">
                 <div class="mx-4 header flex justify-between items-center gap-10">
-                    <span class="text-black text-2xl font-bold whitespace-nowrap">Ministry Dashboard</span>
-                
+                    <span class="text-black text-2xl font-bold whitespace-nowrap">Project Dashboard</span>
+
                     <!-- Search -->
                     <form class="hidden lg:block flex-grow relative w-full">
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6M15 10a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6M15 10a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
                             </svg>
                         </div>
                         <input id="search" type="text" placeholder="Search" name="search"
@@ -116,39 +118,101 @@
                         <div class="w-6 h-6 relative">
                             <div class="w-6 h-6 left-0 top-0 cursor-pointer">
                                 <img src="./public/svgs/notifications.svg" alt="">
-                                <div class="absolute inline-flex items-center justify-center w-2 h-2 text-xs font-bold text-white bg-red-500 rounded-full -top-1 right-0"></div>
+                                <div
+                                    class="absolute inline-flex items-center justify-center w-2 h-2 text-xs font-bold text-white bg-red-500 rounded-full -top-1 right-0">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
 
+
+                <!-- overview cards -->
                 <div class="mt-10 mx-4">
-                    <div class="md:grid md:grid-cols-4 md:gap-4 lg:gap-10">
-                        <div class="py-4 px-4 relative bg-blue-600 rounded-lg shadow space-y-2 mb-3">
-                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">Budget</div>
-                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">$68,125</div>
-                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                    <div class="md:grid md:grid-cols-3 md:gap-4 lg:gap-10">
+                        <div class="py-4 px-4 relative bg-white rounded-lg shadow space-y-2 mb-3 flex justify-between">
+                            <div class="group-1">
+                                <div class="text-2xl font-normal font-['IBM Plex Sans'] leading-10">1</div>
+                                <div class="text-xs text-[#808080]"> Projects</div>
+                            </div>
+                            <div class="group-2">
+                                <svg width="61" height="60" viewBox="0 0 61 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.25" width="60" height="60" rx="30" fill="#D1F3FF" />
+                                    <rect x="0.25" width="60" height="60" rx="30" fill="white" fill-opacity="0.2" />
+                                    <g opacity="0.8" clip-path="url(#clip0_9_1972)">
+                                        <path
+                                            d="M28 34H12V46C12 47.0609 12.4214 48.0783 13.1716 48.8284C13.9217 49.5786 14.9391 50 16 50H44C45.0609 50 46.0783 49.5786 46.8284 48.8284C47.5786 48.0783 48 47.0609 48 46V34H32V38H28V34ZM28 32H10V20C10 17.8 11.8 16 14 16H22V14C22 12.9391 22.4214 11.9217 23.1716 11.1716C23.9217 10.4214 24.9391 10 26 10H34C35.0609 10 36.0783 10.4214 36.8284 11.1716C37.5786 11.9217 38 12.9391 38 14V16H46C47.0609 16 48.0783 16.4214 48.8284 17.1716C49.5786 17.9217 50 18.9391 50 20V32H32V28H28V32ZM34 16V14H26V16H34Z"
+                                            fill="#222222" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_9_1972">
+                                            <rect width="40" height="40" fill="white" transform="translate(10 10)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="py-4 px-4 relative bg-sky-600 rounded-lg shadow space-y-2 mb-3">
-                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">Ongoing Project</div>
-                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">5</div>
-                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                        <div class="py-4 px-4 relative bg-white rounded-lg shadow space-y-2 mb-3 flex justify-between">
+                            <div class="group-1">
+                                <div class="text-2xl font-normal font-['IBM Plex Sans'] leading-10">5</div>
+                                <div class="text-xs text-[#808080]"> Applications</div>
+                            </div>
+                            <div class="group-2">
+                                <svg width="61" height="60" viewBox="0 0 61 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.25" width="60" height="60" rx="30" fill="#FFF2E2" />
+                                    <g clip-path="url(#clip0_9_1981)">
+                                        <path
+                                            d="M33.5834 23.3333H18.0279C17.7332 23.3333 17.4506 23.2163 17.2422 23.0079C17.0338 22.7995 16.9167 22.5169 16.9167 22.2222V17.7778C16.9167 17.4831 17.0338 17.2005 17.2422 16.9921C17.4506 16.7837 17.7332 16.6667 18.0279 16.6667H33.5834C33.8781 16.6667 34.1607 16.7837 34.3691 16.9921C34.5775 17.2005 34.6945 17.4831 34.6945 17.7778V22.2222C34.6945 22.5169 34.5775 22.7995 34.3691 23.0079C34.1607 23.2163 33.8781 23.3333 33.5834 23.3333ZM19.139 21.1111H32.4723V18.8222H19.139V21.1111Z"
+                                            fill="#222222" />
+                                        <path
+                                            d="M33.5834 25.6444H18.0279C17.7332 25.6444 17.4506 25.7615 17.2422 25.9699C17.0338 26.1783 16.9167 26.4609 16.9167 26.7556V31.1111C16.9167 31.4058 17.0338 31.6884 17.2422 31.8968C17.4506 32.1052 17.7332 32.2222 18.0279 32.2222H30.6501L34.6945 28.1111V26.7556C34.6945 26.4609 34.5775 26.1783 34.3691 25.9699C34.1607 25.7615 33.8781 25.6444 33.5834 25.6444ZM32.4723 30H19.139V27.7778H32.4723V30Z"
+                                            fill="#222222" />
+                                        <path
+                                            d="M22.5388 45.0111V44.9444L22.8944 43.4H14.6944V14.4444H36.9166V25.8333L39.1388 23.7333V13.3333C39.1388 13.0386 39.0218 12.756 38.8134 12.5477C38.605 12.3393 38.3224 12.2222 38.0277 12.2222H13.5833C13.2886 12.2222 13.006 12.3393 12.7976 12.5477C12.5892 12.756 12.4722 13.0386 12.4722 13.3333V44.4444C12.4722 44.7391 12.5892 45.0217 12.7976 45.2301C13.006 45.4385 13.2886 45.5556 13.5833 45.5556H22.4722C22.4813 45.3727 22.5036 45.1908 22.5388 45.0111Z"
+                                            fill="#222222" />
+                                        <path
+                                            d="M34.6945 31.3L33.8279 32.1778C34.0429 32.1335 34.24 32.0264 34.3942 31.8702C34.5485 31.714 34.653 31.5156 34.6945 31.3Z"
+                                            fill="#222222" />
+                                        <path
+                                            d="M16.9167 39.9333C16.9167 40.228 17.0338 40.5106 17.2422 40.719C17.4506 40.9274 17.7332 41.0444 18.0279 41.0444H23.4056L23.739 39.6L23.8834 38.9889V38.9333H19.139V36.6667H26.1834L28.4056 34.4444H18.0279C17.7332 34.4444 17.4506 34.5615 17.2422 34.7699C17.0338 34.9783 16.9167 35.2609 16.9167 35.5556V39.9333Z"
+                                            fill="#222222" />
+                                        <path
+                                            d="M47.4612 28.5222L43.7167 24.7778C43.5506 24.6111 43.3531 24.4789 43.1358 24.3887C42.9184 24.2985 42.6854 24.2521 42.4501 24.2521C42.2147 24.2521 41.9817 24.2985 41.7644 24.3887C41.547 24.4789 41.3496 24.6111 41.1834 24.7778L25.9501 40.1L24.6945 45.4444C24.6475 45.675 24.6464 45.9126 24.6914 46.1436C24.7363 46.3745 24.8264 46.5944 24.9565 46.7905C25.0865 46.9866 25.254 47.1551 25.4493 47.2864C25.6446 47.4177 25.8638 47.5091 26.0945 47.5556C26.209 47.5671 26.3244 47.5671 26.4389 47.5556C26.5751 47.5777 26.7139 47.5777 26.8501 47.5556L32.239 46.3667L47.4612 31.1111C47.6275 30.9459 47.7594 30.7494 47.8495 30.533C47.9396 30.3165 47.9859 30.0844 47.9859 29.85C47.9859 29.6156 47.9396 29.3835 47.8495 29.167C47.7594 28.9506 47.6275 28.7541 47.4612 28.5889V28.5222ZM31.1056 44.3444L27.0389 45.2444L28.0278 41.2111L39.4501 29.6667L42.5834 32.8L31.1056 44.3444ZM43.8389 31.5444L40.7056 28.4111L42.4723 26.6667L45.6278 29.8222L43.8389 31.5444Z"
+                                            fill="#222222" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_9_1981">
+                                            <rect width="40" height="40" fill="white" transform="translate(10.25 10)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
                         </div>
-                        <div class="py-4 px-4 relative bg-teal-600 rounded-lg shadow space-y-2 mb-3">
-                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">No. Pending Project</div>
-                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">5</div>
-                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
-                        </div>
-                        <div class="py-4 px-4 relative bg-green-600 rounded-lg shadow space-y-2 mb-3">
-                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">Pending Applications</div>
-                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">125</div>
-                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                        <div class="py-4 px-4 relative bg-white rounded-lg shadow space-y-2 mb-3 flex justify-between">
+                            <div class="group-1">
+                                <div class="text-2xl font-normal font-['IBM Plex Sans'] leading-10">3%</div>
+                                <div class="text-xs text-[#808080]">Milestone Reached
+                                </div>
+                            </div>
+                            <div class="group-2">
+                                <svg width="61" height="60" viewBox="0 0 61 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.25" width="60" height="60" rx="30" fill="#E1EAF9" />
+                                    <path
+                                        d="M21.9165 13.3333H25.2498V46.6667H21.9165V13.3333ZM41.9165 25L28.5832 34.3333V15.6667L41.9165 25Z"
+                                        fill="#222222" />
+                                    <rect x="0.25" width="60" height="60" rx="30" fill="white" fill-opacity="0.2" />
+                                </svg>
+
+                            </div>
                         </div>
                     </div>
 
                     <!-- // table titlee -->
-                    <div class="text-black text-xl font-medium my-10">Pending Applications</div>
+                    <div class="text-black text-xl font-medium my-10">Budget Metrics </div>
 
                     <!-- // table -->
                     <div class="overflow-y-auto w-full">
@@ -168,17 +232,19 @@
                                         Date
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        
+
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
-                                        <img class="w-10 h-10 rounded-full" src="./public/img/Lighting.png" alt="Jese image">
+                                    <th scope="row"
+                                        class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
+                                        <img class="w-10 h-10 rounded-full" src="./public/img/Lighting.png"
+                                            alt="Jese image">
                                         <div class="ps-3">
                                             <div class="text-base font-semibold">Fadel Inc</div>
-                                        </div>  
+                                        </div>
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         100 Hospital Beds
@@ -190,29 +256,36 @@
                                         12 Dec, 2020
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <button class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center" type="button">
+                                        <button
+                                            class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center"
+                                            type="button">
                                             • • •
-                                          </button>
-                                          
-                                          <!-- Dropdown menu -->
-                                          <div class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
-                                              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconHorizontalButton">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <div
+                                            class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
+                                            <ul class="py-2 text-sm text-gray-700"
+                                                aria-labelledby="dropdownMenuIconHorizontalButton">
                                                 <li>
-                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
+                                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
                                                 </li>
                                                 <li>
-                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
+                                                    <a href="#"
+                                                        class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
                                                 </li>
-                                              </ul>
-                                          </div>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
-                                        <img class="w-10 h-10 rounded-full" src="./public/img/img& bg.png" alt="Jese image">
+                                    <th scope="row"
+                                        class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
+                                        <img class="w-10 h-10 rounded-full" src="./public/img/img& bg.png"
+                                            alt="Jese image">
                                         <div class="ps-3">
                                             <div class="text-base font-semibold">Bradtke Group</div>
-                                        </div>  
+                                        </div>
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         100 Hospital Beds
@@ -224,29 +297,36 @@
                                         12 Dec, 2020
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <button class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center" type="button">
+                                        <button
+                                            class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center"
+                                            type="button">
                                             • • •
-                                          </button>
-                                          
-                                          <!-- Dropdown menu -->
-                                          <div class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
-                                              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconHorizontalButton">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <div
+                                            class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
+                                            <ul class="py-2 text-sm text-gray-700"
+                                                aria-labelledby="dropdownMenuIconHorizontalButton">
                                                 <li>
-                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
+                                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
                                                 </li>
                                                 <li>
-                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
+                                                    <a href="#"
+                                                        class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
                                                 </li>
-                                              </ul>
-                                          </div>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
-                                        <img class="w-10 h-10 rounded-full" src="./public/img/img & bg.png" alt="Jese image">
+                                    <th scope="row"
+                                        class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
+                                        <img class="w-10 h-10 rounded-full" src="./public/img/img & bg.png"
+                                            alt="Jese image">
                                         <div class="ps-3">
                                             <div class="text-base font-semibold">Jacobi LLC</div>
-                                        </div>  
+                                        </div>
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         100 Hospital Beds
@@ -258,46 +338,58 @@
                                         12 Dec, 2020
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <button class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center" type="button">
+                                        <button
+                                            class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center"
+                                            type="button">
                                             • • •
-                                          </button>
-                                          
-                                          <!-- Dropdown menu -->
-                                          <div class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
-                                              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconHorizontalButton">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <div
+                                            class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
+                                            <ul class="py-2 text-sm text-gray-700"
+                                                aria-labelledby="dropdownMenuIconHorizontalButton">
                                                 <li>
-                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
+                                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
                                                 </li>
                                                 <li>
-                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
+                                                    <a href="#"
+                                                        class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
                                                 </li>
-                                              </ul>
-                                          </div>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <!-- // table pagination -->
 
-                        <nav class="flex items-center flex-column flex-wrap md:flex-row justify-end pt-4" aria-label="Table navigation">
+                        <nav class="flex items-center flex-column flex-wrap md:flex-row justify-end pt-4"
+                            aria-label="Table navigation">
                             <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8 gap-2">
                                 <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-black bg-bg-[#0F7309] rounded-s-lg hover:bg-[#0F7309] hover:text-white">Previous</a>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-black bg-bg-[#0F7309] rounded-s-lg hover:bg-[#0F7309] hover:text-white">Previous</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-white bg-[#0F7309] hover:bg-[#0F7309] hover:text-white">1</a>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-white bg-[#0F7309] hover:bg-[#0F7309] hover:text-white">1</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white hover:bg-[#0F7309] hover:text-white">2</a>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white hover:bg-[#0F7309] hover:text-white">2</a>
                                 </li>
                                 <li>
-                                    <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 bg-white hover:bg-[#0F7309] hover:text-white">3</a>
+                                    <a href="#" aria-current="page"
+                                        class="flex items-center justify-center px-3 h-8 bg-white hover:bg-[#0F7309] hover:text-white">3</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white hover:bg-[#0F7309] hover:text-white">4</a>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white hover:bg-[#0F7309] hover:text-white">4</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white rounded-e-lg hover:bg-[#0F7309] hover:text-white">Next</a>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white rounded-e-lg hover:bg-[#0F7309] hover:text-white">Next</a>
                                 </li>
                             </ul>
                         </nav>
