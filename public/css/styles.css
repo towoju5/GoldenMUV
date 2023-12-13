@@ -23,3 +23,7 @@ body {
 .page-content {
 	margin-top: 3rem;
 }
+
+.rotate-transition {
+	transition: transform 1s ease; /* Adjust the duration as needed */
+}

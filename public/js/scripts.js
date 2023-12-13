@@ -1,5 +1,10 @@
 // dropdown button
 $(document).ready(function () {
+
+    // Year at the bottom
+    $('#year').html = new Date().getFullYear();
+
+    
     $(".dropdown-button").on("click", function () {
         // find closest tr and toggle dropdown
         $(this).closest('tr').find('.dropdown-menu').toggleClass("hidden");
@@ -13,8 +18,4 @@ $(document).ready(function () {
         }
     });
 });
-
-
-// Year at the bottom
-document.getElementById('year').innerHTML = new Date().getFullYear();
 
