@@ -17,3 +17,9 @@ body {
 #hamburger.active .bar:nth-of-type(3) {
 	transform: rotate(-45deg) translateX(-4px) translateY(-5px);
 }
+
+/* // dashboard page css */
+
+.page-content {
+	margin-top: 3rem;
+}

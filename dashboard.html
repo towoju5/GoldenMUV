@@ -24,8 +24,9 @@
 
 <body class="bg-gray-100">
     <main>
-        <div class="flex">
-            <div class="bg-white h-screen p-5 pt-8 w-80 relative">
+        <div class="flex gap-10">
+            <!-- // sidebar -->
+            <div class="hidden md:block bg-white h-screen p-5 pt-8 w-80 relative shadow-lg">
                 <div class="sidebar-close-open absolute -right-4 top-[5rem] duration-300 cursor-pointer">
                     <img src="./public/img/arrow-left.svg" alt="ope-close-nav">
                 </div>
@@ -34,51 +35,280 @@
                 <img src="./public/img/logo.svg" alt="Logo" class="mx-auto">
 
                 <nav class="mt-10 space-y-2">
-                    <a href="#dashboard" class="inline-flex items-center py-3 px-3 bg-indigo-100 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                    <a href="#dashboard"
+                        class="inline-flex items-center py-3 px-3 bg-indigo-100 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
                         <img src="./public/svgs/dashboard.svg" alt="Projects">
-                        <div class="text-green-800 text-xl">Dashboard</div>
+                        <div class="text-green-800 text-xl no-text-sm">Dashboard</div>
                     </a>
 
-                    <a href="#project" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
-                        <img src="./public/svgs/project.svg" alt="Projects">   
-                        <div class="text-green-800 text-xl">Project</div>
+                    <a href="#project"
+                        class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/project.svg" alt="Projects">
+                        <div class="text-green-800 text-xl no-text-sm">Project</div>
                     </a>
 
-                    <a href="#board" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
-                        <img src="./public/svgs/board.svg" alt="Projects">   
-                        <div class="text-green-800 text-xl">Board</div>
+                    <a href="#message"
+                        class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/message.svg" alt="Message">
+                        <div class="text-green-800 text-xl no-text-sm">Message</div>
                     </a>
 
-                    <a href="#client" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
-                        <img src="./public/svgs/client.svg" alt="Projects">   
-                        <div class="text-green-800 text-xl">Clients</div>
+                    <a href="#board"
+                        class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/board.svg" alt="Projects">
+                        <div class="text-green-800 text-xl no-text-sm">Board</div>
                     </a>
 
-                    <a href="#settings" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
-                        <img src="./public/svgs/settings.svg" alt="Projects">   
-                        <div class="text-green-800 text-xl">Settings</div>
+                    <a href="#client"
+                        class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/client.svg" alt="Projects">
+                        <div class="text-green-800 text-xl no-text-sm">Clients</div>
                     </a>
 
-                    <a href="#plans" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
-                        <img src="./public/svgs/plans.svg" alt="Projects">   
-                        <div class="text-green-800 text-xl">Plans</div>
+                    <a href="#settings"
+                        class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/settings.svg" alt="Projects">
+                        <div class="text-green-800 text-xl no-text-sm">Settings</div>
                     </a>
 
-                    <div class="w-full bottom-0">
-                        <a href="./index.html" class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
-                            <img src="./public/svgs/logout.svg" alt="Projects">   
-                            <div class="text-green-800 text-xl">Logout</div>
+                    <a href="#plans"
+                        class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                        <img src="./public/svgs/plans.svg" alt="Projects">
+                        <div class="text-green-800 text-xl no-text-sm">Plans</div>
+                    </a>
+
+                    <div class="w-full bottom-0 absolute">
+                        <a href="./index.html"
+                            class="inline-flex items-center py-3 px-3 hover:bg-indigo-100 rounded-lg gap-4 w-full hover:cursor-pointer">
+                            <img src="./public/svgs/logout.svg" alt="Projects">
+                            <div class="text-green-800 text-xl no-text-sm">Logout</div>
                         </a>
                     </div>
-
                 </nav>
+            </div>
+
+            <!-- page content -->
+            <div class="w-full md:mx-10 mt-10">
+                <div class="mx-4 header flex justify-between items-center gap-10">
+                    <span class="text-black text-2xl font-bold whitespace-nowrap">Ministry Dashboard</span>
+                
+                    <!-- Search -->
+                    <div class="hidden lg:block flex-grow relative w-full">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6M15 10a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+                            </svg>
+                        </div>
+                        <input id="search" type="text" placeholder="Search"
+                            class="py-2 pl-10 pr-3 rounded-full bg-[#f1f6ef] border border-gray-200 focus:outline-none focus:ring focus:border-blue-300 w-full" />
+                    </div>
+
+                    <div class="inline-flex items-center gap-10  lg:gap-20">
+                        <div class="hidden md:inline-flex  items-center gap-2">
+                            <img class="w-8 h-8 left-[2px] top-[2px] rounded-full" src="./public/svgs/client.svg">
+                            <div class="group-text whitespace-nowrap">
+                                <div class="text-dark text-sm font-light"> Governing Body</div>
+                                <div class="text-dark text-sm font-light"> Asril ibrahim</div>
+                            </div>
+                        </div>
+                        <div class="w-6 h-6 relative">
+                            <div class="w-6 h-6 left-0 top-0">
+                                <img src="./public/svgs/notifications.svg" alt="">
+                                <div class="absolute inline-flex items-center justify-center w-2 h-2 text-xs font-bold text-white bg-red-500 rounded-full -top-1 right-0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="mt-10 mx-4">
+                    <div class="md:grid md:grid-cols-4 md:gap-4 lg:gap-10">
+                        <div class="py-4 px-4 relative bg-blue-600 rounded-lg shadow space-y-2 mb-3">
+                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">Budget</div>
+                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">$68,125</div>
+                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                        </div>
+                        <div class="py-4 px-4 relative bg-sky-600 rounded-lg shadow space-y-2 mb-3">
+                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">Ongoing Project</div>
+                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">5</div>
+                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                        </div>
+                        <div class="py-4 px-4 relative bg-teal-600 rounded-lg shadow space-y-2 mb-3">
+                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">No. Pending Project</div>
+                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">5</div>
+                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                        </div>
+                        <div class="py-4 px-4 relative bg-green-600 rounded-lg shadow space-y-2 mb-3">
+                            <div class="text-white text-base font-normal font-['Rubik'] leading-tight">Pending Applications</div>
+                            <div class="text-white text-2xl font-normal font-['IBM Plex Sans'] leading-10">125</div>
+                            <div class="text-white text-xs font-normal font-['IBM Plex Sans'] leading-none"> %18 decrease from last month</div>
+                        </div>
+                    </div>
+
+                    <!-- // table titlee -->
+                    <div class="text-black text-xl font-medium my-10">Pending Applications</div>
+
+                    <!-- // table -->
+                    <div class="overflow-y-auto w-full">
+                        <table class="w-full text-sm text-left">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                                        Company Name
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Project
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Budget
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Date
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
+                                        <img class="w-10 h-10 rounded-full" src="./public/img/Lighting.png" alt="Jese image">
+                                        <div class="ps-3">
+                                            <div class="text-base font-semibold">Fadel Inc</div>
+                                        </div>  
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        100 Hospital Beds
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        943,050,707.46
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        12 Dec, 2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <button class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center" type="button">
+                                            • • •
+                                          </button>
+                                          
+                                          <!-- Dropdown menu -->
+                                          <div class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
+                                              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconHorizontalButton">
+                                                <li>
+                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
+                                                </li>
+                                              </ul>
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
+                                        <img class="w-10 h-10 rounded-full" src="./public/img/img& bg.png" alt="Jese image">
+                                        <div class="ps-3">
+                                            <div class="text-base font-semibold">Bradtke Group</div>
+                                        </div>  
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        100 Hospital Beds
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        943,050,707.46
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        12 Dec, 2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <button class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center" type="button">
+                                            • • •
+                                          </button>
+                                          
+                                          <!-- Dropdown menu -->
+                                          <div class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
+                                              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconHorizontalButton">
+                                                <li>
+                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
+                                                </li>
+                                              </ul>
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap gap-2 md:gap-4">
+                                        <img class="w-10 h-10 rounded-full" src="./public/img/img & bg.png" alt="Jese image">
+                                        <div class="ps-3">
+                                            <div class="text-base font-semibold">Jacobi LLC</div>
+                                        </div>  
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        100 Hospital Beds
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        943,050,707.46
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        12 Dec, 2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <button class="dropdown-button inline-flex items-center p-2 text-sm font-medium text-center" type="button">
+                                            • • •
+                                          </button>
+                                          
+                                          <!-- Dropdown menu -->
+                                          <div class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute">
+                                              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconHorizontalButton">
+                                                <li>
+                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">View</a>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Suspend</a>
+                                                </li>
+                                              </ul>
+                                          </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- // table pagination -->
+
+                        <nav class="flex items-center flex-column flex-wrap md:flex-row justify-end pt-4" aria-label="Table navigation">
+                            <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8 gap-2">
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-black bg-bg-[#0F7309] rounded-s-lg hover:bg-[#0F7309] hover:text-white">Previous</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-white bg-[#0F7309] hover:bg-[#0F7309] hover:text-white">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white hover:bg-[#0F7309] hover:text-white">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 bg-white hover:bg-[#0F7309] hover:text-white">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white hover:bg-[#0F7309] hover:text-white">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-black bg-white rounded-e-lg hover:bg-[#0F7309] hover:text-white">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Core Navbar JS-->
-    <script src="./public/js/navbar.js"></script>
+    <!-- <script src="./public/js/navbar.js"></script> -->
     <!-- Core theme JS-->
     <script src="./public/js/scripts.js"></script>
 </body>
